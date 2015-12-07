@@ -1,0 +1,118 @@
+<!DOCTYPE author [
+  <!ELEMENT author (#PCDATA)>
+  <!ENTITY ș "&#x15f;">
+  <!ENTITY Ș "&#x15e;">
+  <!ENTITY ț "&#x163;">
+  <!ENTITY Ț "&#x162;">
+]>  
+
+  <glossary xmlns="http://docbook.org/ns/docbook" version="5.1" xml:lang="hu"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Glosar</title>
+    <glossdiv>
+        <title>C</title>
+        <glossentry xml:id="cuda_glssry">
+            <glossterm>CUDA</glossterm>
+            <abbrev>CUDA</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
+        <title>I</title>
+        <glossentry xml:id="ieee1998_glssry">
+            <glossterm>IEEE Metoda recomandată pentru cerin&ț;ele pentru specifica&ț;iile de software</glossterm>
+            <acronym>IEEE, 1998</acronym>
+            <abbrev>IEEE Std 830-1998</abbrev>
+            <glossdef>
+                <para>Documentul standard IEEE de cerin&ț;ele software-ului
+                    <link xlink:href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=5841"></link>.
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+    <glossdiv>
+        <title>D</title>
+        <glossentry xml:id="devrob_glssry">
+            <glossterm>Dezvoltare Robotică</glossterm>
+            <abbrev>DevRob</abbrev>
+            <glossdef>
+                <para>TODO</para>
+            </glossdef>
+        </glossentry>
+        <glossentry xml:id="deepq_glssry">
+            <glossterm>Deep Q-Learning</glossterm>
+            <abbrev>DeepQ</abbrev>
+            <glossdef>
+                <para>TODO</para>
+            </glossdef>
+        </glossentry>
+        <glossentry xml:id="docbook_glssry">
+            <glossterm>DocBook XML</glossterm>
+            <abbrev>DB</abbrev>
+            <glossdef>
+                <para> <indexterm>
+                    <primary>DocBook</primary> 
+                    <secondary>XML</secondary>
+                </indexterm>
+                <link xlink:href="http://docbook.org/tdg51/en/html/">DocBook</link> 
+                 în special în subiectele de IT pentru a pregăti documente scrise în
+                 limbi moderne, marcare standard.</para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+    <glossdiv>
+        <title>L</title>
+        <glossentry xml:id="lzw_glssry">
+            <glossterm>Algoritmul Liv-Zempel-Welch</glossterm>
+            <abbrev>LZW</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
+        <title>M</title>
+        <glossentry xml:id="mlp_glssry">
+            <glossterm>Multilayer Perceptron</glossterm>
+            <abbrev>MLP</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
+        <title>N</title>
+        <glossentry xml:id="nlp_glssry">
+            <glossterm>Natural Language Processing</glossterm>
+            <abbrev>NLP</abbrev>
+            <glossdef>
+                <para>
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>    
+    <glossdiv>
+        <title>U</title>
+        <glossentry xml:id="udprog_glssry">
+            <glossterm>The Yearbook of the Programmers of University of Debrecen</glossterm>
+            <abbrev>UDPROG</abbrev>
+            <glossdef>
+                <para>Programare regulat asociat cu
+                    <link xlink:href="http://progpater.blog.hu/2014/05/31/ez_a_prog1_mi_lesz_a">Universitatea din Debre&ț;in</link> pentru formare,
+                    comunitate de dezvoltatori 
+                    <link xlink:href="https://www.facebook.com/groups/udprog/">organizat pe Facebook</link>,
+                    Unul dintre punctul său focal sunt <link xlink:href="http://sourceforge.net/p/udprog/code/ci/master/tree/">software-urile</link>,
+                    iar în celălalt
+                    <link xlink:href="http://sourceforge.net/projects/udprog/files/?source=navbar">anuarul</link> stă.
+                </para>
+            </glossdef>
+        </glossentry>
+    </glossdiv>
+</glossary>
+

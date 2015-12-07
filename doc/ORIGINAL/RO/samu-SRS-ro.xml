@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<book xmlns="http://docbook.org/ns/docbook" version="5.1" xml:lang="hu"
+<!DOCTYPE author [
+  <!ELEMENT author (#PCDATA)>
+  <!ENTITY ș "&#x15f;">
+  <!ENTITY Ș "&#x15e;">
+  <!ENTITY ț "&#x163;">
+  <!ENTITY Ț "&#x162;">
+]>
+<book xmlns="http://docbook.org/ns/docbook" version="5.1" xml:lang="ro"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlns:xi="http://www.w3.org/2001/XInclude">    
     <info>
         <title>Bátfai Samu</title>
-        <subtitle>Egy testetlen fejlődési robotikus ágens</subtitle>
+        <subtitle>O dezvoltare fără trup de agent robotic</subtitle>
         <titleabbrev>SAMU</titleabbrev>
         <author>
             <personname>
@@ -13,20 +20,20 @@
                 <firstname>Norbert</firstname>        
             </personname>    
             <affiliation>
-                <shortaffil>E. adjunktus, DEIK.</shortaffil>
-                <jobtitle>Egyetemi adjunktus</jobtitle>
-                <orgname>Debreceni Egyetem, Informatikai Kar</orgname>
-                <orgdiv>Információtechnológiai Tanszék</orgdiv>
+                <shortaffil>Lector, DEIK.</shortaffil>
+                <jobtitle>Lector</jobtitle>
+                <orgname>Universitatea Debre&ț;in, Facultatea de Informatică</orgname>
+                <orgdiv>Departamentul de Tehnologia Informa&ț;iei</orgdiv>
                 <address>
                     <email>batfai.norbert@inf.unideb.hu</email>
                     <email>nbatfai@gmail.com</email>
                 </address>
             </affiliation>
             <address>
-                <street>Kassai út 26.</street>
-                <city>Debrecen</city>
+                <street>Strada Kassai nr 26.</street>
+                <city>Debre&ț;in</city>
                 <postcode>4028</postcode>
-                <country>Magyarország</country>
+                <country>Ungaria</country>
                 <email>batfai.norbert@inf.unideb.hu</email>
                 <otheraddr>
                     <link xlink:href="http://www.inf.unideb.hu/~nbatfai">http://www.inf.unideb.hu/~nbatfai</link>
@@ -40,96 +47,72 @@
             <holder>Dr. Bátfai Norbert</holder>
         </copyright>
         <legalnotice>
-            <para>Samu Bátfai (Nahshon) Software Requirements Specification
+            <para>Samu Bátfai (Nahshon) Specifica&ț;ia de Cerin&ț;e a software-ului
             </para>
             <para>                
                 Copyright (C) 2014, Norbert Bátfai. Ph.D., batfai.norbert@inf.unideb.hu
             </para>
             <para>
-                This program is free software: you can redistribute it and/or modify
-                it under the terms of the GNU General Public License as published by
-                the Free Software Foundation, either version 3 of the License, or
-                (at your option) any later version.
+                Acest program este un software liber: îl pute&ț;i redistribui &ș;i/sau modifica
+                 acesta în condi&ț;iile de GNU publicat de Funda&ț;ia Software-ului liber,
+                 fie versiunea 3 a Licen&ț;ei, sau orice versiune ulterioară.
             </para>
             <para>
-                This program is distributed in the hope that it will be useful,
-                but WITHOUT ANY WARRANTY; without even the implied warranty of
-                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-                GNU General Public License for more details.
+                Acest program este distribuit în speran&ț;a că va fi util,
+                 dar FĂRĂ NICI O GARAN&Ț;IE; chiar fără garan&ț;ia implicită de
+                 VANDABILITATE sau POTRIVIRE PENTRU UN ANUMIT SCOP.Pentru mai
+		 multe detalii, vezi GNU General Public License.
             </para>
             <para>
-                You should have received a copy of the GNU General Public License
-                along with this program.  If not, see 
+                Ar trebui să fi primit o copie de pe GNU
+                 împreună cu acest program. Dacă nu, vezi
                 <link xlink:href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</link>.
-            </para>
-            <para>
-                Ez a program szabad szoftver; terjeszthető illetve módosítható a 
-                Free Software Foundation által kiadott GNU General Public License
-                dokumentumában leírtak; akár a licenc 3-as, akár (tetszőleges) későbbi 
-                változata szerint.
-            </para>
-            <para>
-                Ez a program abban a reményben kerül közreadásra, hogy hasznos lesz, 
-                de minden egyéb GARANCIA NÉLKÜL, az ELADHATÓSÁGRA vagy VALAMELY CÉLRA 
-                VALÓ ALKALMAZHATÓSÁGRA való származtatott garanciát is beleértve. 
-                További részleteket a GNU General Public License tartalmaz.
-            </para>
-            <para>
-                A felhasználónak a programmal együtt meg kell kapnia a GNU General 
-                Public License egy példányát; ha mégsem kapta meg, akkor
-                tekintse meg a
-                <link xlink:href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</link>
-                oldalon.
-            </para>
-            <para>
-                <link xlink:href="http://gnu.hu/gplv3.html">http://gnu.hu/gplv3.html</link>                
             </para>
         </legalnotice>            
         <revhistory>
             <revision>
                 <revnumber>Nahshon.0.0.1</revnumber>
                 <date>2015-11-28</date>
-                <revremark>Initial document release for comment.</revremark>
+                <revremark>Documentul ini&ț;ial lansat pentru comentarii.</revremark>
             </revision>
             <revision>
                 <revnumber>Nahshon.0.0.2</revnumber>
                 <date>2015-12-02</date>
-                <revremark>Rendszermodellek és rendszer-evolúciós részek vázlatos kidolgozása.</revremark>
+                <revremark>Modele de sistem &ș;i componente evoluative de sistem dezvoltare schematică.</revremark>
             </revision>
         </revhistory>
     </info>   
-    <xi:include href="samu-glssry-SRS-hu.xml">
+    <xi:include href="samu-glssry-SRS-ro.xml">
         <xi:fallback>
             <para>
-                <emphasis>XInclude: samu-glssry-SRS-hu.xml file not found</emphasis>
+                <emphasis>XInclude: samu-glssry-SRS-ro.xml file not found</emphasis>
             </para>
         </xi:fallback>
     </xi:include>             
     <chapter>
         <info>
-            <title>Bevezetés</title>
+            <title>Introducere</title>
             <keywordset>
-                <keyword>Developmental Robotics</keyword>
-                <keyword>developmental robotic</keyword>
+                <keyword>Dezvoltare Robotică</keyword>
                 <keyword>Samu</keyword>
-                <keyword>Deep Q-learning</keyword>
+                <keyword>Învă&ț;are de Q-adânc</keyword>
             </keywordset>
         </info>
         <section>
             <title>Bátfai Samu</title>
             <para>
-                Samu egy kutatási kezdeményezés egy olyan testetlen fejlődési robotikus (developmental robotic) ágens
-                létrehozására, amely az emberrel összemérhető képességű csevegő robotok létrehozásának alapjául szolgálhat. 
+		Samu este o cercetare ini&ț;iativă pentru crearea agentului dezvoltării de robotică fără trup,
+                care este comparabil cu capacită&ț;iile omului. 
             </para>
             <para>
-                Az aktuális kutatási eredményeket a <citation>SAMU</citation> kézirat mutatja be.
+                Rezultatele reale ale cercetării prezintă manuscrisul <citation>SAMU</citation>.
             </para>
             <para>
-                A családnév szerepeltetése Samu fejlődési robotikus jellegének ad hangsúlyt, mivel elsősorban családi
-                körben lesz nevelendő! 
+		Numele de familie este includerea naturii robotică lui Samu, iar dezvoltarea se va concentra în primul rând
+                în familie!
             </para>
             <para>
-                A jelen pillanatig számos eldobható gyors prototípust fejlesztettünk Samu teszteléséhez, ezek a következők:
+                Până în prezent, multe prototipuri rapide de unică folosin&ț;ă au fost dezvoltate pentru testarea lui Samu, acestea sunt:
                 <itemizedlist>
                     <listitem>
                         <para>
@@ -185,89 +168,83 @@
             </para>
         </section>
         <section>
-            <title>A fejlesztendő rendszer áttekintő leírása</title>
+            <title>Descrierea miniatură a sistemului care va fi dezvoltat</title>
             <para>
-                Samu szoftvere alapvetően egy csevegőprogram, amely lehetőséget ad különböző gépi tanulásos
-                algoritmusok kipróbálására, tsztelésére, fejlesztésére. Samu szülei (gondozói) az a szűk családi kör, 
-                amelyben a robot fejlesztése
-                történik. A gondozók tipikusan a konzolon keresztül érintkeznek a programmal. Az egyéb felhasználók
-                hálózaton keresztül tudnak a csevegésbe bekapcsolódni. Fontos további szempont hogy adott Samu ágensek 
-                tudásukat képesek legyenek egymással hálózaton keresztül megosztani, azaz kvázi egymást tanítani. Illetve 
-                Samu tudjon magában is beszélni. Samu programja legyen képes állandóan futni, ha nincs sem kozolos, sem hálózati 
-                aktivitás akkor megfelelő korpuszok olvasásával tanítsa magát, illetve önmagával folytasson dialógust!
-                További fontos aspektus, hogy Samu egyben egy kutatási projekt is, ennek megfelelően a kapcsolódó kutatásokat
-                is támogatnia kell a fejlesztendő rendszernek.
+		Software-ul lui Samu este de fapt un program de chat, care permite testarea &ș;i dezvoltarea diferitelor alogoritme de
+                învă&ț;are-mecanică. Părin&ț;ii lui Samu (ingrijitorii) este acel cerc îngust de familie, în care dezvoltarea robotului se face.
+		Persoanele care îi îngrijesc de obicei vin în contact cu programul prin intermediul consolei. Al&ț;i utilizatori
+                se pot alătura în chat prin re&ț;ea. Un alt aspect important este că agen&ț;ii Samu să fie capabili de a împărtă&ș;i cuno&ș;tin&ț;ele
+                lor unul cu celălalt printr-o re&ț;ea, cvasi învă&ț;are reciproc. Samu să fie capabil, de a vorbi cu el însu&ș;i.
+                Programul lui Samu să fie capabil să ruleze continuu, atunci când nu există nici o activitate de consolă sau de re&ț;ea, &ș;i
+                să înve&ț;e cu cititul corpusuriilor, sau să vorbească cu sine însu&ș;i.
+                Un alt aspect important este faptul că Samu este, de asemenea, un proiect de cercetare.
             </para>
         </section>
     </chapter>        
     <chapter>
         <info>
-            <title>Samu szoftverkövetelményei</title>
+            <title>Cerin&ț;ele de Software a lui Samu</title>
             <keywordset>
                 <keyword></keyword>
             </keywordset>
         </info>
         <section>
-            <title>Samu áttekintése</title>   
+            <title>Prezentarea generală a lui Samu</title>   
             <para>        
-                Az előző fejezet rövid szöveges áttekintő leírása alapján elkészítünk egy az UML komponens
-                diagramok jelöléseit használó magyarázó ábrát. 
+		Cu ajutorul capitolului anterior, am făcut o figură a componen&ț;iilor diagramelor UML.
             </para>                                                       
         </section>         
         
         <section>
-            <title>Követelmények</title>   
+            <title>Cerin&ț;e</title>   
             <para> 
-                A szokásos funkcionális és nem funkcionális követelményeken túl Samu esetén meg kell
-                fogalmaznunk fontos szakterületi követelményeket is, hiszen a fejlesztés mögött a 
-                mély Q-tanulás alkalmazása és kutatása áll. A szakterületi követelmények után
-                a tervezési folyamatot a rendszerkövetelmények áttekintésével segítjük.
+		 Cu obi&ș;nuitele cerin&ț;ele func&ț;ionale &ș;i non-func&ț;ionale,în cazul lui Samu trebuie să
+                 amintim ni&ș;te cerin&ț;e importante în domeniul profesional, precum în spatele dezvoltării
+                 stă aplicarea studiului Q-adânc. După cerin&ț;ele tehnice, procesul de planificare, îl
+                 ajutăm cu revizuirea cerin&ț;elor de sistem.
             </para>
             <section>
-                <title>Funkcionális követelmények</title>   
+                <title>Cerin&ț;e Func&ț;ionale</title>   
                 <para> 
-                    Samu alapvető működésével kapcsolatban az alábbi alapvető követelményeket fektetjük le.
+		    Cu opera&ț;iunile de bază a lui Samu legate de cerin&ț;ele esen&ț;iale prevăzute.
                 </para>            
                 <itemizedlist>
                     <listitem>
                         <para>
-                            A Samut családi körben elérő gondozók (logikailag) külön csatornákat tudjanak
-                            használni, hogy Samu meg tudja különböztetni őket. A családi kör kitüntetett 
-                            gondozójától Samu fenntartások nélkül tanuljon, azaz korlátlan bizalommal legyen
-                            a szülő felé, tehát a szülői bemenetet tekintse igaznak. Legalábbis fiatal korában, 
-                            ahogyan a humán gyerekekre is ez igaz.  
+			    Cei din jurul familiar a lui Samu, să fie capabile să folosească diferite canale,
+			    pentru că, dorim că Samu să fie capabil a le deosebi. Samu să înve&ț;e tot, de la
+			    cel mai bun membru al familiei, să aibă încredere în părin&ț;i, deci să vadă că
+			    cuvintele părin&ț;iilor sunt adevărate. Cel pu&ț;in, în vârsta fragedă, ca &ș;i un copil uman.
                         </para>
                     </listitem>  
                     <listitem>
                         <para>
-                            A Samut felkereső internetes csevegőktől Samu ne, vagy csak nagyon korlátozott 
-                            mértékben tanuljon.
+			    Samu de la chat-urile de pe internet, să nu înva&ț;ă absolut nimic, sau numai foarte pu&ț;in.
                         </para>
                     </listitem>                      
                     <listitem>
                         <para>
-                            A szülő által megadott más kitüntetett Samu programoktól tanulhasson olyan
-                            tulajdonságokkal mintha a gondozóktól tanulna.                            
+			    Samu să înve&ț;e de la alte programe de Samu date de părin&ț;i, a&ș;a cum &ș;i de la părin&ț;i.                           
                         </para>
                     </listitem>                                          
                     <listitem>
                         <para>
-                            Samu programja soha ne álljon le, ha mégis, akkor mentse el állapotát (ez a lementett
-                            állapot Samu lelke, maga a futó Samu folyamat a teste) és legközelebb ebből
-                            az elmentett állapotból induljon el.
+			    Programul lui Samu, să nu se oprească niciodată, dacă totu&ș;i se opre&ș;te, atunci să salveze
+			    schimbăriile (această salvată stare, este sufletul lui Samu, &ș;i corpul procesului lui Samu),
+			    &ș;i data viitoare, să se pornească din starea salvată.
                         </para>
                     </listitem>  
                 </itemizedlist>                
             </section>            
             <section>
-                <title>Nem funkcionális követelmények</title>   
+                <title>Cerin&ț;e non-func&ț;ionale</title>   
                 <para>
-                    Samuval mint a fejlesztendő rendszerrel általában az alábbi alapvető követelményeket fektetjük le.
+                    Cu opera&ț;iunile de bază a lui Samu legate de cerin&ț;ele esen&ț;iale prevăzute.
                 </para>        
                 <itemizedlist>
                     <listitem>
                         <para>
-                            Samu programja támogassa a különböző gépi tanulásos algoritmusok kipróbálhatóságát.
+                            Programul lui Samu, să suporte testarea algoritmilor de învă&ț;are ma&ș;ină.
                         </para>
                     </listitem>                
                     <listitem>
