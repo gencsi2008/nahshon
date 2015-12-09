@@ -3,7 +3,8 @@
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xmlns:xi="http://www.w3.org/2001/XInclude">    
     <info>
-        <title>Gencsi Samu</title>
+
+	<title>Gencsi Samu</title>
         <subtitle>Egy testetlen fejlődési robotikus ágens</subtitle>
         <titleabbrev>SAMU</titleabbrev>
         <author>
@@ -141,11 +142,29 @@
     </xi:include>     
     <part xml:id="samu-SRS-hu.part1">
         <title>A szoftverkövetelmények dokumentuma</title>
-        <partintro>
-	    
-            <para>
-                TODO: ide jön hamarosan egy jó kép
-            </para>
+        <partintro>	    
+<literallayout></literallayout><literallayout></literallayout><literallayout></literallayout><literallayout></literallayout>
+<literallayout></literallayout><literallayout></literallayout><literallayout></literallayout><literallayout></literallayout>
+         <para>
+
+                        <mediaobject>
+                           <imageobject>
+                    		<imagedata fileref="img/3.png" scale="25" align="center" valign="middle" />
+                 	   </imageobject>
+                        </mediaobject>
+
+			<mediaobject>
+			   <imageobject>
+                    		<imagedata fileref="img/4.png" scale="25" align="center" valign="middle" />
+                 	   </imageobject>
+			</mediaobject>
+
+			<mediaobject>
+			   <imageobject>
+                    		<imagedata fileref="img/5.png" scale="25" align="center" valign="middle" />
+                 	   </imageobject>
+			</mediaobject>
+	</para>
         </partintro>                            
         <chapter>
             <info>
@@ -910,9 +929,23 @@
     <part xml:id="samu-SRS-hu.part2">
         <title>Tervezési dokumentáció</title>
         <partintro>
-            <para>
-                 TODO: ide jön valami jó kép
-            </para>
+<literallayout></literallayout><literallayout></literallayout><literallayout></literallayout><literallayout></literallayout>
+<literallayout></literallayout><literallayout></literallayout><literallayout></literallayout><literallayout></literallayout>
+         <para>
+
+                        <mediaobject>
+                           <imageobject>
+                    		<imagedata fileref="img/1.png" scale="40" align="center" valign="middle" />
+                 	   </imageobject>
+                        </mediaobject>
+
+			<mediaobject>
+			   <imageobject>
+                    		<imagedata fileref="img/2.png" scale="40" align="center" valign="middle" />
+                 	   </imageobject>
+			</mediaobject>
+	</para>
+
         </partintro>   
         <chapter>
             <info>
