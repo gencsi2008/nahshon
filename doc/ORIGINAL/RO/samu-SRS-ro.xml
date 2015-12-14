@@ -40,7 +40,7 @@
                 </otheraddr>
             </address>
         </author>
-        <edition>SAMU SRS, v. Nahshon.0.0.1</edition>
+        <edition>SAMU SRS, v. Nahshon.0.0.3</edition>
         <pubdate>2015</pubdate>
         <copyright>
             <year>2015</year>
@@ -80,6 +80,11 @@
                 <date>2015-12-02</date>
                 <revremark>Modele de sistem &ș;i componente evoluative de sistem dezvoltare schematică.</revremark>
             </revision>
+	    <revision>
++                <revnumber>Nahshon.0.0.3</revnumber>
++                <date>2015-12-04</date>
++                <revremark>Ridicarea lui SAMU-OOCWC &ș;i repara&ț;ii.</revremark>
++            </revision>
         </revhistory>
     </info>   
     <xi:include href="samu-glssry-SRS-ro.xml">
@@ -249,194 +254,163 @@
                     </listitem>                
                     <listitem>
                         <para>
-                            A különböző algoritmusokkal való kutatást/tesztelést egyfajta külső vezérlésnek tekinthetjük.
-                            Ez például akkor szembetűnő, ha összehasonlítjuk a prototípusok terminálon vagy hálózaton jött
-                            bemeneteinek feldolgozását az ezek hiányában beinduló korpuszok olvasásával. Mivel az előbbi 
-                            kettő a Samu osztályban van implementálva, utóbbi a main függvényben. E külső vezérlés mellé, vagy
-                            méginkább e helyett vezessnk be egyfajta belső vezérlést, ahol Samu dönti el, hogy éppen
-                            mit csináljon.  
+			    Cercetăriile &ș;i testăriile cu deosebitele algoritme, putem considera ca un fel de control extern.
+			    De exemplu acest lucru atunci este izbitoare, când comparăm prelucrarea inputelor venite de pe re&ț;ea
+			    sau de pe terminal a prototipelor cu pornirea citirii a corpusiilor în lipsa ei. Deoarece cele precedente
+			    sunt implementate în clasa lui Samu, cel din urmă în func&ț;ia main. Lângă acest control extern, sau chiar
+			    în locul acestuia să introducem un control intern, unde Samu consideră, ce să facă.
                         </para>
                     </listitem>                                
                     <listitem>
                         <para>
-                            Samu minden kommunikációt mint korpuszokat mentsen le.
+			    Samu să salveze toate comunica&ț;iuniile ca &ș;i corpusuri.
                         </para>
                     </listitem>                                    
                     <listitem>
                         <para>
-                            Samu egyszerre egy beszélgetést tudjon folytatni (szemben azzal a távolabbi céllal, amikor a 
-                            beszélgetéseket processzeknek feleltetjük meg és Samu egyfajta olyan operációs rendszer jellegű
-                            alakot öltsön, aki időosztással tud több beszélgetést szimultán kezelni.)
+			    Samu în acela&ș;i timp să poată continua numai o conversa&ț;ie (fa&ț;ă co scopul, când conversa&ț;iile sunt
+			    ni&ș;te procese &ș;i Samu un fel de sistem de operare.)
                         </para>
                     </listitem>                                
                     <listitem>
                         <para>
-                            Samu legyen open source alapú, lehetőleg GNU GPL v3. A dokumentálás nyelve DocBook XML 5.1 szabvány.
+			    Samu să fie un software liber, tip de GNU GPL v3. Limba documentală este norma DocBook XML 5.1
                         </para>
                     </listitem>                                                    
                     <listitem>
                         <para>
-                            Samu tanító korpuszai legyenek open source alapú korpuszok.
+			    Corpusele învă&ț;ătoare a lui Samu să fie tip soft liber.
                         </para>
                     </listitem>                                                                        
                     <listitem>
                         <para>
-                            Samu fusson UNIX-típusú rendszereken, például 
+                            Samu să func&ț;ioneze pe sisteme de UNIX, de exemplu în sistemele:
                             <indexterm>
                                 <primary>GNU</primary> 
                                 <secondary>Linux</secondary>
                                 <see>Linux</see>
-                            </indexterm>GNU/Linux rendszereken.
+                            </indexterm>
                         </para>
-                    </listitem>                                                                        
-                    <listitem>
-                        <para>
-                            Samu a feldolgozott tanuló korpuszait tartsa perzisztens gyorsító-tárban.     
-                        </para>
-                    </listitem>                                            
-                    <listitem>
-                        <para>
-                            Samu használja ki a CUDA kártya adta extrém párhuzmosságot, ha a futtató környezet
-                            rendelkezik ilyen kártyával.
-                        </para>
-                    </listitem>                                            
+                    </listitem>
                 </itemizedlist>                                                                  
             </section>   
             <section>
-                <title>Szakterületi követelmények</title>   
+                <title>Cerin&ț;e de Specialitate</title>   
                 <section>
-                    <title>Q-tanulás</title>                   
+                    <title>Învă&ț;are-Q</title>                   
                     <para xml:id="samu_alg_activity"> 
-                        A Samu tanulásában alapvető Q-tanuláshoz szükséges a megerősítéses tanulás alapjának, azaz a 
-                        jutalomnak és a büntetésnek a biztosítása. Ezt Samu a <citation>SAMU</citation> kéziratban
-                        bemutatott módon valósítja meg, ezt foglalja össze a következő, az UML aktivitás diagramjainak jelöléseit
-                        használó ábra. 
+                        Samu să primească recompensă sau pedeapsă.
+			O figură care reprezintă acest lucru, este ata&ș;at mai jos.
                     </para>            
                     <para>
                         <figure>
-                            <title>Samu Q-tanulása</title>
+                            <title>Învă&ț;area-Q a lui Samu</title>
                             <mediaobject>
                                 <imageobject>
                                     <imagedata fileref="img/a1.png" scale="55" />
                                 </imageobject>
                                 <textobject>
-                                    <phrase>Samu Q-tanulása.</phrase>
+                                    <phrase>Învă&ț;area-Q a lui Samu.</phrase>
                                 </textobject>
                             </mediaobject>
                         </figure>                                                
                     </para>
                 </section>
                 <section>
-                    <title>A kutatási feladatok aspektus-orientált megfogalmazása</title>               
+                    <title>Formulare orientate aspect al sarcinilor de cercetare</title>               
                     <para> 
-                        A fejlesztendő rendszer egyik alapfeladata a kapcsolódó kutatás támogatása, az eddigi 
-                        gyors protókat felhasználó kutatási tapasztalat azt sugallja, hogy a kutatás támogatását
-                        Samuba célszerű az aspektusorientál paradigma mentén átszövő vonatkozások formájában
-                        megvalósítani. 
+                       Una dintre principalele sarcini ale sistemului dezvoltat de cercetare necesare pentru a sprijini existente
+                       prototipe de cercetare experien&ț;ă de utilizator rapid arată că sprijinul pentru cercetare
+                       de SAMU ar trebui să constituie de-a lungul paradigmei predominantă în aspecte pentru realizare. 
                     </para>     
                 </section>                       
             </section>
             <section>
-                <title>Felhasználói követelmények</title>   
+                <title>Cerin&ț;e de Utilizatori</title>   
                 <para> 
-                    A felhasználók felé Samu programja klasszikus cseegőprogramként jelenik meg.
+                   Samu pentru utilizatori apare ca un program classic de conversa&ț;ii.
                 </para>            
                 <itemizedlist>
                     <listitem>
                         <para>
-                            A csevegő felhasználók Samuból a szokásos csevegő programok megszokott felületét lássák.  
+                            Utilizatorii din Samu, să vadă o suprafa&ț;ă classică de conversa&ț;ii. 
                         </para>
                     </listitem>                      
                     <listitem>
                         <para>
-                            Samu be tudjon kapcsolódni internetes csevegőkbe. Ennek megfelelően ne csak 1:1, hanem
-                            1:N résztvevős beszélgetéseket is tudjon kezelni.  
+                            Samu să poată conecta în chat-uri pe internet. Prin urmare să poată să discute
+			    cu mai multe persoane în acela&ș;i timp.
+                        </para>
+                    </listitem>                                                               
+                    <listitem>
+                        <para>
+                            Utilizatorii să poată învă&ț;a pe &Ș;amu. 
                         </para>
                     </listitem>                      
                     <listitem>
                         <para>
-                            A csevegőknek legyen lehetőségük hitelesíteni magukat és így az azonosított
-                            felhasználók egyrészt nagyobb hatást tudjanak gyakorolni Samu tanulási folyamataira, 
-                            másrészt róluk Samu legyen képes információkat tárolni, így emlékezni rájuk. 
-                        </para>
-                    </listitem>                                          
-                    <listitem>
-                        <para>
-                            A gondozó felhasználók tudják tanítani Samut.  
-                        </para>
-                    </listitem>                      
-                    <listitem>
-                        <para>
-                            A Samut családi körben elérő gondozók meg tudják szakítani Samu tanulását 
-                            vagy hálózati kommunikációját, tehát élvezzen prioritást a terminálon keresztüli
-                            elérés.  
+                            Controlul prin consol să fie în prioritate fa&ț;ă cu cel de pe re&ț;ea (internet).  
                         </para>
                     </listitem>  
                 </itemizedlist>
             </section>   
             <section>
-                <title>Rendszerkövetelmények</title>   
+                <title>Cerin&ț;e de sistem</title>   
                 <para> 
-                    A követelmények feltárását az UML használati eset diagramjainak jelöléseivel készített
-                    ábrákkal segítjük.
+                    Cerin&ț;ele pentru divulgarea de utilizare UML caz diagrame marcaje făcute
+                     diagrame ajutatoare.
                 </para>
                 <section>
-                    <title>Használati esetek</title>   
+                    <title>Cazuri de utilizare</title>   
                     <para> 
-                        Azonosított vagy azonosítatlan felhasználó ugyanúgy lehet humán személy vagy 
-                        Samu-típusú csevegő robot. Az azonosítottakra emlékszik Samu és ők tudják őt tanítani,
-                        az azonosítatlanok csak csevegni tudnak Samuval. Ez a megkülönböztetés azt jelenti, hogy az
-                        azonosítatlan csevegés nem tanítja Samut.                         
+                         Utilizatorul poate fi identificat sau nu este identificat indivizi umani sau acelea&ș;i
+                         tip Samu de chat robot. Samu î&ș;i aminte&ș;te de cele identificate &ș;i este în măsură să-l înve&ț;e,
+                         neidentificatele poate discuta doar cu Samu.                        
                     </para> 
                     <para> 
-                        A kitüntetett gondozó felhasználó feladata Samu tanítása, amely alapja lehet egyoldalú
-                        beszélés Samuhoz, beszélgetés Samuval, vagy tanító korpuszok olvastatása Samuval.
-                        A kutató felhasználó speciális, Samunak olyan szolgáltatásokat kell felé nyújtania, amelyek
-                        Samu működését tudják monitorozni. 
+                         Utilizatorul grija deosebită învă&ț;ătura lui Samu, care se poate baza pe o singură fa&ț;ă
+                         Samu vorbesc, conversa&ț;ie cu Samu, un profesor sau citind corpusuri.
+                         Cercetătorul trebuie să ofere utilizatorilor specifice, servicii Samu, care sunt
+                         Opera&ț;ie Samu pot fi monitorizate.
                     </para>
                     <para>
                         <figure>
-                            <title>Samu használati esetei</title>
+                            <title>Cazuri de utilizare a lui Samu</title>
                             <mediaobject>
                                 <imageobject>
                                     <imagedata fileref="img/uc1.png" scale="55" />
                                 </imageobject>
                                 <textobject>
-                                    <phrase>Samu használati esetei.</phrase>
+                                    <phrase>Cazuri de utilizare a lui Samu.</phrase>
                                 </textobject>
                             </mediaobject>
                         </figure>                            
                     </para>            
                     <para> 
-                        A tanítás tehát nem csupán beszélgetés a gondozókkal, illetve a csevegés sem jelent 
-                        szükségképpen minden bejövő mondatra választ.
+                        Învă&ț;area nu înseamnă convorbirea cu utilizatorul.
                     </para>                        
                     <para> 
                         <figure>
-                            <title>A beszélgetés és a tanulás kapcsolata</title>
+                            <title>Rela&ț;ia dintre învă&ț;are &ș;i conversa&ț;ie</title>
                             <mediaobject>
                                 <imageobject>
                                     <imagedata fileref="img/uc2.png" scale="55" />
                                 </imageobject>
                                 <textobject>
-                                    <phrase>A beszélgetés és a tanulás kapcsolata.</phrase>
+                                    <phrase>Rela&ț;ia dintre învă&ț;are &ș;i conversa&ț;ie.</phrase>
                                 </textobject>
                             </mediaobject>
                         </figure>                            
-                    </para>            
-                    <para> 
-                        Ugyanakkor a tanítás mindig üzenetfogadással és a megerősítéses tanulás alkalmazásával jár,
-                        a korábban vázolt <link xlink:href="#samu_alg_activity">tanulási algoritmusnak</link> megfelelően.
-                    </para>                        
+                    </para>                                  
                     <para> 
                         <figure>
-                            <title>A tanulás</title>
+                            <title>Învă&ț;area</title>
                             <mediaobject>
                                 <imageobject>
                                     <imagedata fileref="img/uc3.png" scale="55" />
                                 </imageobject>
                                 <textobject>
-                                    <phrase>A tanulás.</phrase>
+                                    <phrase>Învă&ț;area.</phrase>
                                 </textobject>
                             </mediaobject>
                         </figure>                            
@@ -446,107 +420,89 @@
             </section>   
         
             <section>
-                <title>Interfészek</title>   
+                <title>Interfa&ț;e</title>       
                 <para>
-                    TODO 
-                </para>        
-                <para>
-                    Samu lelke sima szöveges állomány legyen, bz2-vel tömörítve.  
+                    Sufletul lui Samu să fie doar text, archivat cu bz2.  
                 </para>        
             </section>                        
-        </section>                
-        <section>
-            <title>Összefoglalás</title>   
-            <para> 
-                TODO
-            </para>
-        </section>        
+        </section>                    
     </chapter>
     <chapter>
         <info>
-            <title>Rendszermodellek</title>
+            <title>Modelle de Sistem</title>
             <keywordset>
                 <keyword></keyword>
             </keywordset>
         </info>
         <section>
-            <title>Rendszer-specifikáció</title>
+            <title>Specifica&ț;ie de Sistem</title>
             <para>
-                Jó gyakorlat a rendszerkövetelmények elemzésére az eldobható gyors
-                prototípusok grafikus modelljeinek elkészítése. Ezek számos esetben (például az osztálymodell
-                esetén osztálydiagramok formájában) automatikusan, reverse engineering jelleggel és egyben az agilis
-                szemlélettel összhangban magukból az eldobható gyors prototípusok forráskódjaiból is generálhatóak.
+                 Este o bună practică de a analiza cerin&ț;ele de sistem pentru unică folosin&ț;ă rapid
+                 elaborarea de modele grafice prototipuri. Acestea sunt, în multe cazuri, (de exemplu, modelul de clasă
+                 după caz, de clasă) în mod automat, inginerie inversă, &ș;i, de asemenea, caracterul agil
+                 prototipuri rapide de unică folosin&ț;ă în sine forráskódjaiból este în concordan&ț;ă cu abordarea poate fi generat.
             </para>
             <section>
-                <title>Samu viselkedése madártávlatból</title>
+                <title>Comportarea lui Samu</title>
                 <para>
                 </para>
                 <para> 
                     <figure>
-                        <title>Samu állapotdiagramja</title>
+                        <title>Diagramul de stare a lui Samu</title>
                         <mediaobject>
                             <imageobject>
                                 <imagedata fileref="img/sm1.png" scale="55" />
                             </imageobject>
                             <textobject>
-                                <phrase>Samu állapotdiagramja.</phrase>
+                                <phrase>Diagramul de stare a lui Samu.</phrase>
                             </textobject>
                         </mediaobject>
                     </figure>                            
                 </para>                                
                 <para>
                     <table frame="all">
-                        <title>Az állapotok leírása</title>
+                        <title>Descrierea stăriilor</title>
                         <tgroup cols="2">
                             <thead>
                                 <row>
-                                    <entry>Állapot</entry>
-                                    <entry>Leírás</entry>
+                                    <entry>Stare</entry>
+                                    <entry>Descriere</entry>
                                 </row>
                             </thead>
                             <tbody> 
                                 <row>  
-                                    <entry>Várakozás</entry> 
-                                    <entry>Samu várakozik a konzolról vagy a hálózatról érkező bejövő üzenetre (egy mondatra).</entry> 
+                                    <entry>A&ș;teptare</entry> 
                                 </row>
                                 <row>  
-                                    <entry>Olvasás</entry> 
-                                    <entry>Samu az előkészített tanító korpuszokat olvassa (annak egy mondatát), 
-                                        azaz tanul ezekből a korpuszokból.</entry> 
+                                    <entry>Citire</entry> 
                                 </row>
                                 <row>  
-                                    <entry>Q-tanulás</entry> 
-                                    <entry>Samu a kapott mondattal végrehajtja a részben korábban már vázolt 
-                                        <link xlink:href="#samu_alg_activity">tanulási algoritmusát</link>.</entry> 
+                                    <entry>Învă&ț;are-Q</entry> 
                                 </row>
                             </tbody>
                         </tgroup>      
                     </table>   
                     <table frame="all">
-                        <title>Az állapotátmenetek leírása</title>
+                        <title>Descrierea tranzi&ț;iilor de stări</title>
                         <tgroup cols="2">
                             <thead>
                                 <row>
-                                    <entry>Átmenet</entry>
-                                    <entry>Leírás</entry>
+                                    <entry>Tranzi&ț;ie</entry>
+                                    <entry>Descriere</entry>
                                 </row>
                             </thead>
                             <tbody> 
                                 <row>  
-                                    <entry>timeout</entry> 
-                                    <entry>A megadott időhatáron belül sem a konzolról, sem a hálózatról nem
-                                        érkezett üzenet.</entry> 
+                                    <entry>Lipsă de timp</entry> 
+                                    <entry>În termenul specificat, fie consola sau re&ț;eaua nu
+                                         prime&ș;te mesaj.</entry> 
                                 </row>
                                 <row>  
-                                    <entry>üzenet</entry> 
-                                    <entry>Üzenet (egy mondat) érkezett vagy a gondozói konzolról, vagy a 
-                                        hálózatról.</entry> 
+                                    <entry>Mesaj</entry> 
+                                    <entry>Mesaj (o propozi&ț;ie) de pe consol sau re&ț;ea.</entry> 
                                 </row>
                                 <row>  
-                                    <entry>válasz</entry> 
-                                    <entry>Samu a bejövő üzire válaszul visszhangozza a 
-                                        korábban már vázolt 
-                                        <link xlink:href="#samu_alg_activity">tanulási algoritmusának</link> kimenetét.</entry> 
+                                    <entry>Răspuns</entry> 
                                 </row>
                             </tbody>
                         </tgroup>      
@@ -554,119 +510,47 @@
                 </para>
             </section>  
             <section>
-                <title>Samu adatmodelljei</title>
+                <title>Modelele de date a lui Samu</title>
                 <para>
-                    Samu jelenlegi eldobható gyors prototípusainak alapvető működése 
-                    a természetes nyelvi mondatokból kibányászott 
-                    Alany-Állítmány-Tárgy tripletekre épül, egy ilyen triplet alapesetben
-                    3 szóból áll, a részletek tekintetében lásd a <citation>SAMU</citation> publikációt.  
+                    Func&ț;ionarea de bază de curent prototip rapid disponibil Samu se bazează
+		    pe propozi&ț;ii limbaj natural minat triple subiect-obiect-predicate, triple 
+	            astfel de default sunt de trei cuvinte.
                 </para>
                 <para>
-                    A tripletek kibányászására mint COTS komponenst a 
+                    Pentru citirea tripletelor folosim NLP
                     <link xlink:href="https://github.com/opencog/link-grammar">opencog/link-grammar</link> 
-                    NLP eszköszt használjuk.
-                </para>
-                <para>
-                    Samu tanulása során minden triplethez egy egyedi MLP neurális hálózatot rendel,
-                    ezek perzisztens tárolásáról gondoskodni kell. A hálózatok mérete jellemző, a 
-                    bemenő réteg neuronjainak a száma Samu vizuális képzeletének szélesség x magasság
-                    számával egyezik meg.
-                </para>
-                <para>
-                    Az Amminadan prototípus bevezette, hogy a tripleteket egy LZW fában is tárolja Samu,
-                    lásd a részletek tekintetében a <citation>SAMU</citation> publikációt.  
                 </para>
             </section>              
             <section>
-                <title>Samu objektummodellje</title>
+                <title>Modelul de obiect a lui Samu</title>
                 <para>
                 </para>
                 <para> 
                     <figure>
-                        <title>Samu osztálydiagramja</title>
+                        <title>Diagramul de clasă a lui Samu</title>
                         <mediaobject>
                             <imageobject>
                                 <imagedata fileref="img/cd1.png" scale="55" />
                             </imageobject>
                             <textobject>
-                                <phrase>Samu osztálydiagramja.</phrase>
+                                <phrase>Diagramul de clasă a lui Samu.</phrase>
                             </textobject>
                         </mediaobject>
                     </figure>                            
                 </para>            
                 <para>
-                    A <classname>Samu</classname> osztály reprezentálja Samu Nahshon verzióját. 
-                    Samunak olyan integrált része a vizuális képzelete, hogy azt a 
-                    <classname>VisualImagery</classname> belső osztállyal absztraháltuk. Samuval
-                    az NLP-s COTS funkciókat elfedő <classname>NLP</classname> osztály, a vizuális 
-                    képzelettel pedig Samu tanulását megvalósító <classname>QL</classname> osztály van 
-                    kompozícióban.
+                    Clasa <classname>Samu</classname> reprezintă verziunea Nahson din Ale&ș;d. 
+                    Samu are înca &ș;i <classname>ImaginareVizuală</classname> de magnat. Samu are
+                    o clasă numită <classname>NLP</classname> osztály, &ș;i o altă numită <classname>QL</classname>.
                 </para>                    
             </section>                
         </section>
     </chapter>    
-    <chapter>
-        <info>
-            <title>Rendszer-evolúció</title>
-            <keywordset>
-                <keyword></keyword>
-            </keywordset>
-        </info>
-        <section>
-            <title>Samu vezérlése</title>
-            <para>
-                Már az Amminadab eldobható gyors protó végén, amikor itt Samu hálózati csevegő-szerver funkciója 
-                megvalósításra került, felmerült, hogy a következő lépésben kifejlesztendő csevegő kliens funkció
-                az alábbi három használati esetet támogassa:
-                <itemizedlist>
-                    <listitem>
-                        <para>
-                            Samu programja humán partnerrel beszélget (ez nem újdonság az eddigiekhez képest).
-                        </para>
-                    </listitem>                
-                    <listitem>
-                        <para>
-                            Samu egy másik Samuval beszélget.
-                        </para>
-                    </listitem>                
-                    <listitem>
-                        <para>
-                            Samu magában beszélget.
-                        </para>
-                    </listitem>                
-                </itemizedlist>                
-                Az utóbbi két használati eset tudományos igényességű vizsgálata a 
-                <citation></citation> kézirat kapcsán a jelen pillanatban is folyik. Ami a jelen dokumentum 
-                szempontjából érdekes az az, hogy el akarjuk kerülni az alábbi jellegű implementációt:
-                
-           <programlisting language="C">
-<![CDATA[        main()
-        {
-        ...
-        if(random() < a_magic_number)
-         Samu_starts_talk();
-        ...
-        }
-]]>
-           </programlisting>                 
-                hanem e helyett azt szeretnénk, hogy Samu &#x201E;szabad akaratából&#x201D; tegye ezt! 
-           Hasonló szituációt említünk meg
-           a <citation>SAMU</citation> kéziratban:
-           
-              <blockquote>
-                  <para>
-                      &#x201E;This is also reinforced by the fact that the incremental learning was implemented in the main.cpp and not in a class of Samu. From a point of view of a programmer, it means that the incremental approach is not yet really part of Samu.&#x201D;
-                  </para>
-              </blockquote>
-           Tehát adott a kihívás, hogy megpróbáljuk mindezt, mint egyfajta belső vezérlést, Samu tanuló algoritmusába integrálni!
-            </para>
-            
-        </section>
-    </chapter>    
+
     <bibliography>
-        <title>Irodalomjegyzék</title>
+        <title>Referin&ț;e</title>
         <bibliodiv>
-            <title>Kutatási cikkek</title>
+            <title>Articole de cercetare</title>
             <biblioentry>
                 <abbrev>SAMU</abbrev>
                 <authorgroup>
@@ -677,7 +561,7 @@
                         </personname>    
                     </author>
                 </authorgroup>
-                <title>A disembodied developmental robotic agent called Samu Bátfai</title>
+                <title>O dezvoltare fără trup de agent robotic numit Bátfai Samu</title>
                 <publisher>
                     <publishername>
                         <link xlink:href="http://arxiv.org/abs/1511.02889">http://arxiv.org/abs/1511.02889</link>

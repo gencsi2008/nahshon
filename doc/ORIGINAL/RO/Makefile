@@ -22,8 +22,6 @@ validate_jing_samu:
 
 .PHONY: validate_xmllint_emu
 validate_xmllint_samu:
-	xmllint --xinclude samu-SRS-ro.xml --output output.xml
-	xmllint --relaxng http://docbook.org/xml/5.1CR4/rng/docbookxi.rng output.xml --noout
 	rm -f output.xml
 
 .PHONY: clean
