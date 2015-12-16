@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.1">
+   <info>
+      <title>Bátfai Samu</title>
+      <subtitle>Eine körperlose Entwicklung Robotermittel</subtitle>
+      <titleabbrev>SAMU</titleabbrev>
+      <author>
+         <personname>
+            <honorific>Dr.</honorific>
+            <surname>Bátfai</surname>
+            <firstname>Norbert</firstname>
+         </personname>
+         <affiliation>
+            <shortaffil>E. adjunktus, DEIK.</shortaffil>
+            <jobtitle>UNI Assistent</jobtitle>
+            <orgname>UNI Debrecen Informatik</orgname>
+            <orgdiv>Lehrstuhl Technologie der Information</orgdiv>
+            <address>
+               <email>batfai.norbert@inf.unideb.hu</email>
+               <email>nbatfai@gmail.com</email>
+            </address>
+         </affiliation>
+         <address>
+            <street>Kassai út 26.</street>
+            <city>Debrecen</city>
+            <postcode>4028</postcode>
+            <country>Ungarn</country>
+            <email>batfai.norbert@inf.unideb.hu</email>
+            <otheraddr>
+               <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://www.inf.unideb.hu/~nbatfai">http://www.inf.unideb.hu/~nbatfai</link>
+            </otheraddr>
+         </address>
+      </author>
+      <edition>SAMU SRS, v. Nahshon.0.0.3</edition>
+      <pubdate>2015</pubdate>
+      <copyright>
+         <year>2015</year>
+         <holder>Dr. Bátfai Norbert</holder>
+      </copyright>
+      <legalnotice>
+         <para>Samu Bátfai (Nahshon) Software Requirements Specification</para>
+         <para>Copyright (C) 2014, Norbert Bátfai. Ph.D., batfai.norbert@inf.unideb.hu</para>
+         <para>This program is free software: you can redistribute it and/or modify                 it under the terms of the GNU General Public License as published by                 the Free Software Foundation, either version 3 of the License, or                 (at your option) any later version.</para>
+         <para>This program is distributed in the hope that it will be useful,                 but WITHOUT ANY WARRANTY; without even the implied warranty of                 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                 GNU General Public License for more details.</para>
+         <para>
+            You should have received a copy of the GNU General Public License                 along with this program.  If not, see
+            <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</link>
+            .
+         </para>
+         <para>Das Programm ist Freeware ; verbreitbar und änderbar laut GNU General Public License der Free Software Foundation, oder laut Lizenz der 3 oder weiterer Versionen </para>
+         <para>Das Programm ist (ohne Garantiebedingungen) freigegeben mit der Hoffnung dass es nützlich ist.Weitere Einzelheiten in der GNU General Public License</para>
+         <para>
+           Der Anwender soll GNU ein Exemplar der GNU General Public License erhalten, wenn nicht angekommen , bitte hier anschauen
+            <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</link>
+         </para>
+         <para>
+            <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://gnu.hu/gplv3.html">http://gnu.hu/gplv3.html</link>
+         </para>
+      </legalnotice>
+      <revhistory>
+         <revision>
+            <revnumber>Nahshon.0.0.1</revnumber>
+            <date>2015-11-28</date>
+            <revremark>Initial document release for comment.</revremark>
+         </revision>
+         <revision>
+            <revnumber>Nahshon.0.0.2</revnumber>
+            <date>2015-12-02</date>
+            <revremark>Schematische Erarbeitung der Systemmodelle und Systemkomponente (Evolution)</revremark>
+         </revision>
+         <revision>
+            <revnumber>Nahshon.0.0.3</revnumber>
+            <date>2015-12-04</date>
+            <revremark>Grundsatz der SAMU-OOCWC und Korrekturen</revremark>
+         </revision>
+      </revhistory>
+   </info>
+   <include xmlns="http://www.w3.org/2001/XInclude" href="samu-glssry-SRS-de.xml">
+   </include>
+   <chapter>
+      <info>
+         <title>Einleitung</title>
+         <keywordset>
+            <keyword>developmental robotic</keyword>
+            <keyword>Samu</keyword>
+            <keyword>Deep Q-learning</keyword>
+         </keywordset>
+         <abstract>
+            <para>Das Dokument beinhaltet die Softwareanforderungen (SRS) des Samu Projektes</para>
+         </abstract>
+      </info>
+      <para>Das Dokument beinhaltet die Softwareanforderungen (SRS) des Samu Projektes</para>
+      <section>
+         <title>Bátfai Samu</title>
+         <para>
+           Samu ist eine Forschungsinitiative für die Erzeugnung eines „körperloses“ Agens
+            <indexterm>
+               <primary>developmental robotic</primary>
+            </indexterm>
+            welches mit dem Mensch vergleichbar ist.
+            <indexterm>
+               <primary>Das wäre ein Fundament für sprachfähigen Roboter</primary>
+            </indexterm>
+           
+         </para>
+         <para>
+            Die aktuelle Forschungsergebnisse werden hier dargestellt.
+            <citation>SAMU</citation>
+            Das Manuscript wird dargestellt.
+         </para>
+         <para>Samu wird in der Familie erzogen.Der Familienname des Samu spielt in seiner Evolution eine wichtige Rolle</para>
+         <para>
+           Bis jetzt haben für Testzwecke zahlreiche schnellerzeugte Prototypen (verwerfliche) entwickelt. Diese sind:
+            <itemizedlist>
+               <listitem>
+                  <para>
+                     Samu,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/samu">https://github.com/nbatfai/samu</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Isaac,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/isaac">https://github.com/nbatfai/isaac</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Jacob,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/jacob">https://github.com/nbatfai/jacob</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Judah,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/judah">https://github.com/nbatfai/judah</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Super-Judah,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/super-judah">https://github.com/nbatfai/super-judah</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Hezron,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/hezron">https://github.com/nbatfai/hezron</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Ram,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/ram">https://github.com/nbatfai/ram</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Amminadab,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/samu">https://github.com/nbatfai/amminadab</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Nahshon,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai/nahshon">https://github.com/nbatfai/nahshon</link>
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Salmon,
+                     <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/nbatfai">https://github.com/nbatfai/</link>
+                  </para>
+               </listitem>
+            </itemizedlist>
+         </para>
+         <para>
+            Diese Schnellentwürfe
+            <indexterm>
+               <primary>verwerfliche Schnellentwicklungen</primary>
+            </indexterm>
+             averwerfliche Schnellentwicklungen
+            <citation>SAMU</citation>
+             Samuwerden im Manusckript dargestellt. Die Funtionierungsprinzipien sind: Samu
+            <itemizedlist>
+               <listitem>
+                  <para>
+ 		aliest / hört eine Satz ( wichtig , die Inputs sind einfach „lies „ „hör“ , die Hauptsache : denke an
+                     <indexterm>
+                        <primary>Turing Test</primary>
+                     </indexterm>
+                     Turing Test oder
+                     <indexterm>
+                        <primary>Loebner Preis</primary>
+                     </indexterm>
+                     Loebner Preis)
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>Die Sätze eines Abstzes werden als Simulationsprogramme gehandelt, lässt das Programm laufen und zeichnet ein Bild(Ausgang)</para>
+               </listitem>
+               <listitem>
+                  <para>
+                    Das Bild wird
+                     <indexterm>
+                        <primary>Q-Lernen</primary>
+                     </indexterm>
+                     durch ein Q-Lernen Algorhytm bearbeitet.Der Vergleich wird als positiv bewertet wenn das Ergebnis und die Realität ausgleicht.Der Ausgang des Q-Lernens wird mit Programmbefehle verfeinert
+                  </para>
+               </listitem>
+            </itemizedlist>
+            Es werden folgende Schritte unternommen :
+            <itemizedlist>
+               <listitem>
+                  <para>lies einen Satz</para>
+               </listitem>
+               <listitem>
+                  <para>
+                    Durch NLP lege fest die Tripletten : Subjekt-Prädikat-Gegenstand (Objekt)                             
+                     <indexterm>
+                        <primary>SPOSubjekt-Prädikat-Gegenstand (Objekt)</primary>
+                     </indexterm>
+                      SPO Triplette
+                  </para>
+               </listitem>
+            </itemizedlist>
+         </para>
+      </section>
+      <section>
+         <title>Beschreibung der Systementwicklung(Usersoft für Samu)</title>
+         <para>Grundsätzlich die Software von Samu ist ein Dialogprogramm.Dieses erlaubt die Erprobung , Entwicklung unterschiedlicher Algorhytmen.Die Eltern(Pfleger) von Samu bilden eine enge Familie .Hier findet die Entwiclung des Roboters statt. Die Pfleger halten die Verbindung mit dem Programmvia Konsole . Andere Netzanwender können im Dialoge einsteigen. Wichtig ist das bestimmte Samus sollten ihr Wissen teilen, Klartext den anderen lehren.Samu sollte auch mit sich selbst sprechen.Samus Programm muss ständig laufen in sofern dass wenn weder die Konsole noch das Netz Befehle stellt, soller sich selbst lehren (lernen) . Er soll das Lehrstoff lesen.Wichtig ist das Samu ist ein Entwicklugsprojekt, also das System sollte fähig sein die Neuentwicklungen akzeptieren.</para>
+      </section>
+   </chapter>
+   <chapter>
+      <info>
+         <title>Softwareanforderungen für Samu</title>
+         <keywordset>
+            <keyword />
+         </keywordset>
+      </info>
+      <section>
+         <title>Samu durchblicken</title>
+         <para>
+            Anhand der kurzer Beschreibung aus dem vorigen Kapitel
+            <indexterm>
+               <primary>UML</primary>
+            </indexterm>
+            haben wir eine erklärend Abbildung vorbereitet
+         </para>
+      </section>
+      <section>
+         <title>Anforderungen</title>
+         <para>
+            Fall Samu müssen wir wichtige Anforderungen des Fachbereiches erwähnen (neben funktionelle und unfunktionelle Anforderungen)
+            <indexterm>
+               <primary>Q-Lernen</primary>
+            </indexterm>
+            weil im Background der Entwicklung steht die Anwendung des Q-Lernens.Ausser der Anforderungen aus dem Fachbereich ergänzen wirmit Systemanforderungen
+         </para>
+         <section>
+            <title>Funktionelle Anforderungen</title>
+            <para>Grunsätzlich sind nötig</para>
+            <itemizedlist>
+               <listitem>
+                  <para>Die Pfleger aus der Familie sollten (logisch) unterschiedliche Kanäle benutzen weil Samu muss sie unterscheidenSamu lernt von seinem Hauptpfleger ohne Zurückhaltung. Also der Eingang von Eltern ist der „wahre“, allerdings in der Jugendzeiten</para>
+               </listitem>
+               <listitem>
+                  <para>Samu soll von anderen User nur bedingt oder gar nichts lernen</para>
+               </listitem>
+               <listitem>
+                  <para>Samu soll von anderen Samusprogramme wie von Pfleger lernen.</para>
+               </listitem>
+               <listitem>
+                  <para>Sein Programm muss ständig laufen und wenn nicht möglich er soll seien Zustand sichern (speichern). Beim nächsten starten ist dieserZustand sein Startzustand</para>
+               </listitem>
+            </itemizedlist>
+         </section>
+         <section>
+            <title>Nicht funktionelle Anforderungen</title>
+            <para>Für Samus Programm (was sich ständig weiterenwickelt) sind gültig auch</para>
+            <itemizedlist>
+               <listitem>
+                  <para>Samus Programm muss das „Probieren“ der unterschiedlichen KI Algorhytmen unterstützen</para>
+               </listitem>
+               <listitem>
+                  <para>Wir betrachten das Suchen / Testen von Algorhytmen als eine Art von externen Steuerung         Das wird sichtbar  wenn wir die vom Netz oder Terminal (das Lesen der) einkommende Eingänge bearbeitet werden.</para>
+               </listitem>
+               <listitem>
+                  <para>Samu sichert die ganze Kommunikation als Korpus (Paket)</para>
+               </listitem>
+               <listitem>
+                  <para>Samu soll einmal eine Besprechung führen(zukünftiger Ziel Gespräch / Prozessor und Samu wird als eine Art von Operations Systemdie Gespreche handeln</para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Samu soll
+                     <indexterm>
+                        <primary>open source</primary>
+                     </indexterm>
+                     möglichst open source artig sein
+                     <indexterm>
+                        <primary>GNU</primary>
+                        <secondary>GPL</secondary>
+                     </indexterm>
+                     Die Dokumentationssprache GNU GPL v3
+                     <indexterm>
+                        <primary>DocBook</primary>
+                     </indexterm>
+                     Standard DocBook XML 5.1
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Samus Lernpakete (Corpus) soll
+                     <indexterm>
+                        <primary>open source</primary>
+                     </indexterm>
+                     Open source artig sein
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Samu soll
+                     <indexterm>
+                        <primary>UNIX</primary>
+                     </indexterm>
+                     Auf UNIX-artige Systeme laufen
+                     <indexterm>
+                        <primary>GNU</primary>
+                        <secondary>Linux</secondary>
+                        <see>Linux</see>
+                     </indexterm>
+                     Und auf GNU/Linux Systeme
+                  </para>
+               </listitem>
+               <listitem>
+                  <para>Samu hält die bearbeitete Corpus in einem schnellem Speicher</para>
+               </listitem>
+               <listitem>
+                  <para>
+                     Samu soll
+                     <indexterm>
+                        <primary>CUDA</primary>
+                     </indexterm>
+                     Die extreme fähigkeiten des CUDA Cardes (wenn die Hardware besitzt die Karte)
+                  </para>
+               </listitem>
+            </itemizedlist>
+         </section>
+         <section>
+            <title>Fachbereichanforderungen</title>
+            <section>
+               <title>Q-Lernen</title>
+               <para>
+                  Samu lernt grundsätzlich anhand von
+                  <indexterm>
+                     <primary>Q-Lernen</primary>
+                  </indexterm>
+                  Es ist nötig die Anwendung der Belohnung /Bestrafung
+                  <citation>SAMU</citation>
+                  Das wird von Samu wie in der Abbildung ausgeführt
+                  <indexterm>
+                     <primary>UML</primary>
+                  </indexterm>
+                  Abbildung der Kennzeichnung im UML Diagramm
+               </para>
+               <para>
+                  <figure>
+                     <title>
+                        Samu
+                        <indexterm>
+                           <primary>Q-Lernen</primary>
+                        </indexterm>
+                        Q-Lernen
+                     </title>
+                     <mediaobject>
+                        <imageobject>
+                           <imagedata fileref="img/a1.png" scale="55" />
+                        </imageobject>
+                        <textobject>
+                           <phrase>Samus Q-Lernen</phrase>
+                        </textobject>
+                     </mediaobject>
+                  </figure>
+               </para>
+            </section>
+            <section>
+               <title>Eine Hauptaufgabe der Entwicklung ist die Unterstützung der verbundene Forschungen</title>
+            </section>
+         </section>
+         <section>
+            <title>Anwenderanforderungen</title>
+            <para>Der Anwender sieht das Samu Programm als klassischer Dialogprogramm</para>
+            <itemizedlist>
+               <listitem>
+                  <para>Die Anwender sehen eine gewöhnte Dialogoberfläche</para>
+               </listitem>
+               <listitem>
+                  <para>Samu soll fähig sein Verbindungen mit Internetdialoge zu leisten.Er soll fähig sein 1:1 oder 1:N Teilnehmer verwalten zu können</para>
+               </listitem>
+               <listitem>
+                  <para>Die Dialogteilnehmer sollten registriert sein. Samu muss die Lehrinformationen speichern</para>
+               </listitem>
+               <listitem>
+                  <para>Die Pfleger müssen Samu lehren können</para>
+               </listitem>
+               <listitem>
+                  <para>Die Familie kann das Lernen oder die Netzkommunikation abbrechen.Prioritär sind die terminalverbindungen</para>
+               </listitem>
+            </itemizedlist>
+         </section>
+         <section>
+            <title>Systemanforderungen</title>
+            <para>
+              Die Anforderungen sind
+               <indexterm>
+                  <primary>UML</primary>
+               </indexterm>
+               Die Abbildungen sind im UML Anwendungsdiagramm dargestellt
+            </para>
+            <section>
+               <title>Einsatzmöglichkeiten</title>
+               <para>Die Anwender können registrierte und unregistrierte menschliche Anwender oder Samu-artige dialogfähige Roboter sein.Nur die registrierte 				Anwender können Samu lehren, die ander dürfen nur ein Dialog aufbauen</para>
+               <para>Die Aufgabe des Hauptpflegers is das Lehren von Samu.Das kann einseitiges Sprechen Richtung Samu, oder Dialog mit Samu oder Anweisungen an Samu (um Programmsequenzen zu lesen) sein.Der Forscher bietet Samu solche Dienste dass durch diese Dienste Samu überwacht wird.</para>
+               <para>
+                  <figure>
+                     <title>Benutzung von Samu(Fälle)</title>
+                     <mediaobject>
+                        <imageobject>
+                           <imagedata fileref="img/uc1.png" scale="55" />
+                        </imageobject>
+                        <textobject>
+                           <phrase>Benutzung von Samu(Fälle)</phrase>
+                        </textobject>
+                     </mediaobject>
+                  </figure>
+               </para>
+               <para>Das Lehren erfolgt wenn jeder eingegebener Satz eine Anwort bekommt</para>
+               <para>
+                  <figure>
+                     <title>Verbindung (Beziehung) zwischen Dialoge und das Lernen</title>
+                     <mediaobject>
+                        <imageobject>
+                           <imagedata fileref="img/uc2.png" scale="55" />
+                        </imageobject>
+                        <textobject>
+                           <phrase>Verbindung (Beziehung) zwischen Dialoge und das Lernen</phrase>
+                        </textobject>
+                     </mediaobject>
+                  </figure>
+               </para>
+               <para>
+                  Das Lehen erfolgt nach dem Empfang eines Befehls und deren Bestätigung
+                  <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="#samu_alg_activity">laut Algorhytm</link>
+                  entsprechend.
+               </para>
+            </section>
+         </section>
+      </section>
+      <section>
+         <title>Zusammenfassung</title>
+      </section>
+   </chapter>
+   <chapter>
+      <info>
+         <title>Systemmodelle</title>
+         <keywordset>
+            <keyword />
+         </keywordset>
+      </info>
+      <section>
+         <title>System Spezifikation</title>
+         <para>
+            Eine gute Übung um die Systemanforderungen zu analysieren ist
+            <indexterm>
+               <primary>schnellentwickeltes Prototyp(verwerflich)</primary>
+            </indexterm>
+            die Erzeugung eines grafisches Modells eines verwerfliches Prototypes
+            <indexterm>
+               <primary>schnellentwickeltes Prototyp(verwerflich)</primary>
+            </indexterm>
+            schnellentwickelte Prototype (verwerflich) können asu Quellcodes generiert werden
+         </para>
+         <section>
+            <title>Samus Verhalten (Grobübersicht)</title>
+            <para />
+            <para>
+               <figure>
+                  <title>Samus Zustanddiagramm</title>
+                  <mediaobject>
+                     <imageobject>
+                        <imagedata fileref="img/sm1.png" scale="55" />
+                     </imageobject>
+                     <textobject>
+                        <phrase>Samus Zustandsdiagramm</phrase>
+                     </textobject>
+                  </mediaobject>
+               </figure>
+            </para>
+            <para>
+               <table frame="all">
+                  <title>Beschreibung der Zustände</title>
+                  <tgroup cols="2">
+                     <thead>
+                        <row>
+                           <entry>Zustand</entry>
+                           <entry>Beschreibung</entry>
+                        </row>
+                     </thead>
+                     <tbody>
+                        <row>
+                           <entry>Warten</entry>
+                           <entry>Samu erwartet einen Satz von der Konsole oder netz</entry>
+                        </row>
+                        <row>
+                           <entry>Lesen</entry>
+                           <entry>Samu liest Lehrsequenzen (Korpus) , satzweise, also lernt</entry>
+                        </row>
+                        <row>
+                           <entry>Q-Lernen</entry>
+                           <entry>
+                              Aufgrund eines Satzes Samu führt (anhand einer früher festelegte Regel)
+                              <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="#samu_alg_activity"> sein Lernalgorhytm</link>
+                              .
+                           </entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+               <table frame="all">
+                  <title>Beschreibung der Übergangszustände</title>
+                  <tgroup cols="2">
+                     <thead>
+                        <row>
+                           <entry>Übergang</entry>
+                           <entry>Beschreibung</entry>
+                        </row>
+                     </thead>
+                     <tbody>
+                        <row>
+                           <entry>Im fetgelegten Zeitraum kommt kein Satz (von Konsole, Netz)</entry>
+                        </row>
+                        <row>
+                           <entry>Botschaft</entry>
+                           <entry>Botschaft (kommt ein Satz) von Konsole oder Netz</entry>
+                        </row>
+                        <row>
+                           <entry>Antwort</entry>
+                           <entry>
+                              Rückmeldung von Samu
+                              <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="#samu_alg_activity"> anhand seiner Lernalgorhytm</link>
+                              Sein Ausgang (seine Antwort)
+                           </entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+            </para>
+         </section>
+         <section>
+            <title>Datenmodelle von Samu</title>
+            <para>
+               Samus zurzeitige
+               <indexterm>
+                  <primary>Schnellentwicklung</primary>
+               </indexterm>
+               Die Schnellentwicklung funktioniert auf Grund der Subjekt-Prädikat-Gegenstand Triplette, siehe die
+               <citation>SAMU</citation>
+               Anzeige oder Veröffentlichung
+            </para>
+            <para>
+               Die Tripletten werden durch
+               <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="https://github.com/opencog/link-grammar">opencog/link-grammar</link>
+               NLP-Werkzeug identifiziert
+            </para>
+            <para>Wenn Samu lernt jede Triplette erhielt ein einmaliges MLP Netz(neural).Diese sind von Samu verwaltet. Die Dimensionen des Netzes werden anhand der Eingangsneuronen festgestellt (Breite * Höhe)</para>
+            <para>
+               <citation>Der Amminadan Prototyp veranlasst dass die Tripletten werden  in einem LZW-Baum gespeichert ;sieheSAMU</citation>
+              Anzeige oder Veröffentlichung
+            </para>
+         </section>
+         <section>
+            <title>Objektmodell von Samu</title>
+            <para />
+            <para>
+               <figure>
+                  <title>Klassendiagramm von Samu</title>
+                  <mediaobject>
+                     <imageobject>
+                        <imagedata fileref="img/cd1.png" scale="55" />
+                     </imageobject>
+                     <textobject>
+                        <phrase>Klassendiagramm von Samu</phrase>
+                     </textobject>
+                  </mediaobject>
+               </figure>
+            </para>
+            <para>
+               A
+               <classname>Samu</classname>
+               Klasse stellt die Samu Nahshon dar   Die optische Vorstellung ist Teil von Samu
+               <classname>VisualImagery</classname>
+               elfedőund ist eine innere Klasse        Die Klasse deckt die NLPs COTS Funktionen
+               <classname>NLP</classname>
+               und durch die optische Fähigkeit ist
+               <classname>QL</classname>
+               űeine Klasse die die Zusammenstzung als Ergebnis des Lernens ist
+            </para>
+         </section>
+      </section>
+   </chapter>
+   <chapter>
+      <info>
+         <title>Entstehung des Systems</title>
+         <keywordset>
+            <keyword />
+         </keywordset>
+      </info>
+      <section>
+         <title>Die Steuerung von Samu</title>
+         <para>
+           Schon der Amminadb
+            <indexterm>
+               <primary>Schnellentwurf Prototyp (verwerflich)</primary>
+            </indexterm>
+            leistet eine Dialog-Server Funktion in der nächsten Schritt wird die Dialog-Kunde (Client) Funtion geleistet es werden 3 Anwendungsfälle unterstützt
+            <itemizedlist>
+               <listitem>
+                  <para>Das Samu Programm führt ein Dialog mit einem menschichen Partner(keine Neuigkeit)</para>
+               </listitem>
+               <listitem>
+                  <para>Samu dialogiert mit einem andern Samu</para>
+               </listitem>
+               <listitem>
+                  <para>Samu spricht mit sich selbst</para>
+               </listitem>
+            </itemizedlist>
+            Die letzte 2 Fälle hat wissenschaftliche Ansprüche und anhand der
+            <citation>PRENATAL</citation>
+            Veröffentlichung wird gegenwärtig geprüft   Wir möchten eine eine Art der Implementierung (wie folgt)
+            <programlisting language="C">main()         {         ...         if(random() &lt; a_magic_number)          Samu_starts_talk();         ...         }</programlisting>
+            Anstelle möchten wir dass Samu aus „eigener Initiative“ das tut
+            <citation>SAMU</citation>
+            
+            <blockquote>
+               <para>„This is also reinforced by the fact that the incremental learning was implemented in the main.cpp and not in a class of Samu. From a point of view of a programmer, it means that the incremental approach is not yet really part of Samu.”</para>
+            </blockquote>
+            Es gibt die Herausforderung dass wir versuchen eine Art von innere Steuerung im Lernen-Prozess zu integrieren
+         </para>
+      </section>
+      <section>
+         <title>Samu Eingebettet</title>
+         <para>
+            In Verbindung mit „der beste Freund der Mensch ist der Wagen“-Prinzip
+            <citation>IMITGAME</citation>
+             wir schon betont wie wichtig ist das hinter einer Forschung eine aufregende Motivation steckt.
+            <citation>OOCWC1</citation>
+            ,
+            <citation>OOCWC2</citation>
+            ,
+            <citation>OOCWC3</citation>
+            ,
+            <citation>OOCWC4</citation>
+            <indexterm>
+               <primary>OOCWC</primary>
+            </indexterm>
+            Das OOCWC Projekt leistet : die potentielle Verbindung ist der eingebette Samu
+         </para>
+         <para>
+            Der eingebettete Samu  ist nicht nur „der beste Freund der Mensch ist der Wagen“-System wo Samu könnte ein Teil der KI(künstliche Intelligenz)des Fahrzeuges sein
+            <indexterm>
+               <primary>OOCWC</primary>
+            </indexterm>
+      		Aber wir nutzen die Entwicklung der OOCWC jetzt speziell
+            <indexterm>
+               <primary>OOCWC</primary>
+            </indexterm>
+            für die Polizei
+         </para>
+         <para>
+           Wir führen folgendes ein
+            <indexterm>
+               <primary>OOCWC</primary>
+            </indexterm>
+            Die Ergänzung der TCP Befehlsätze für OOCWC Kunde Agens (client). Neben den vorhandenen Befehlen ( init, pos, car, route,etc) gibt essolche Protokoll Befehle welche erlauben die Kommunikation zwischen Agens (in natürlicher Sprache) um ihre Aktionen zu übereinstimmen.(vergleichbar mit play für Fußballroboter)
+         </para>
+         <para>
+            Beispiel : ein  Multiagens Polizeibeamter an
+            Dienstleiter Agens
+            <itemizedlist>
+               <listitem>
+                  <para>Auf der Kepplerstrasse haben wir (wagen 7) sehr guter Hamburger gekauft</para>
+               </listitem>
+               <listitem>
+                  <para>Verdächtige Leute sind in den Schumuckgeschäft von Heusenstamm reingegangen</para>
+               </listitem>
+            </itemizedlist>
+            Die Agens die verstehen die inhaltliche wichtigkeit dieser Mitteilungen, werden eher nach Heusenstamm fahren und werden grundsätzlich bessereErgebnisse erzielen (in Kriminalitätsbekempfung)
+         </para>
+         <para>
+            Das benötigt eine neue Version auf der Serverseite
+            <indexterm>
+               <primary>SAMU-OOCWC</primary>
+            </indexterm>
+            <emphasis>SAMU-OOCWC</emphasis>
+            .
+         </para>
+      </section>
+   </chapter>
+   <bibliography>
+      <title>Fachliteratur</title>
+      <bibliodiv>
+         <title>Forschungsartikel</title>
+         <biblioentry>
+            <abbrev>PRENATAL</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>Samu in his prenatal development</title>
+            <publisher>
+               <publishername>(die Verfassung läuft)</publishername>
+            </publisher>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>SAMU</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>A disembodied developmental robotic agent called Samu Bátfai</title>
+            <publisher>
+               <publishername>
+                  <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://arxiv.org/abs/1511.02889">http://arxiv.org/abs/1511.02889</link>
+               </publishername>
+            </publisher>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>IMITGAME</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>Turing's Imitation Game has been Improved</title>
+            <publisher>
+               <publishername>
+                  <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://arxiv.org/abs/1509.00584">http://arxiv.org/abs/1509.00584</link>
+               </publishername>
+            </publisher>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>COP</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>Conscious Machines and Consciousness Oriented Programming</title>
+            <publisher>
+               <publishername>
+                  <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://arxiv.org/abs/1108.2865">http://arxiv.org/abs/1108.2865</link>
+               </publishername>
+            </publisher>
+            <pubdate>2011</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>OOCWC1</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Besenczi</surname>
+                     <firstname>Renátó</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Mamenyák</surname>
+                     <firstname>András</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Ispány</surname>
+                     <firstname>Márton</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>OOCWC: The Robocar World Championship Initiative</title>
+            <biblioset relation="journal">
+               <title>IEEE</title>
+               <volumenum>10.1109/ConTEL.2015.7231223</volumenum>
+               <pagenums>1-6</pagenums>
+               <pubdate>2015</pubdate>
+            </biblioset>
+            <publisher>
+               <publishername>
+                  2015 IEEE 13th International Conference in Telecommunications (ConTEL)
+                  <link xmlns:NS2="http://www.w3.org/1999/xlink" NS2:href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7231223">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7231223</link>
+               </publishername>
+            </publisher>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>OOCWC2</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Besenczi</surname>
+                     <firstname>Renátó</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Mamenyák</surname>
+                     <firstname>András</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Ispány</surname>
+                     <firstname>Márton</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>Traffic Simulation based on the Robocar World Championship Initiative</title>
+            <biblioset relation="journal">
+               <title>Infocommunications Journal</title>
+               <volumenum>7:(3)</volumenum>
+               <pagenums>50-59</pagenums>
+               <pubdate>2015</pubdate>
+            </biblioset>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>OOCWC3</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Besenczi</surname>
+                     <firstname>Renátó</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Szilágyi</surname>
+                     <firstname>Mihály</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Bátfai</surname>
+                     <firstname>Norbert</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Mamenyák</surname>
+                     <firstname>András</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Oniga</surname>
+                     <firstname>Istvány</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Ispány</surname>
+                     <firstname>Márton</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>Using Crowdsensed Information for Traffic Simulation in the Robocar World Championship Framework</title>
+            <biblioset relation="journal">
+               <title>Cognitive Infocommunications (CogInfoCom)</title>
+               <volumenum>2015 6th IEEE Conference on</volumenum>
+               <pagenums>333-337</pagenums>
+               <pubdate>2015</pubdate>
+            </biblioset>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+         <biblioentry>
+            <abbrev>OOCWC4</abbrev>
+            <authorgroup>
+               <author>
+                  <personname>
+                     <surname>Besenczi</surname>
+                     <firstname>Renátó</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Katona</surname>
+                     <firstname>Tamás</firstname>
+                  </personname>
+               </author>
+               <author>
+                  <personname>
+                     <surname>Szilágyi</surname>
+                     <firstname>Mihály</firstname>
+                  </personname>
+               </author>
+            </authorgroup>
+            <title>A Fork Implementation of the Police Edition of the OOCWC System</title>
+            <biblioset relation="journal">
+               <title>Cognitive Infocommunications (CogInfoCom)</title>
+               <volumenum>2015 6th IEEE Conference on</volumenum>
+               <pagenums>163-164</pagenums>
+               <pubdate>2015</pubdate>
+            </biblioset>
+            <pubdate>2015</pubdate>
+         </biblioentry>
+      </bibliodiv>
+   </bibliography>
+</book>
+
+

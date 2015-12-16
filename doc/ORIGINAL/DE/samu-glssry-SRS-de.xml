@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<glossary version="5.1" xmlns="http://docbook.org/ns/docbook">
+	<title>Glossar</title>
+		<glossdiv>
+			<title>C</title>
+			<glossentry>
+				<glossterm>CUDA</glossterm>
+				<abbrev>CUDA</abbrev>
+			<glossdef>
+				<para>
+				      Das ist eine Softwareentwicklungsplattform.In bestimmten Fälle leistet eine HPC Rechnungsfähigkeit.
+				</para>
+			</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>I</title>
+			<glossentry>
+				<glossterm>IEEE Recommended Practice for Software Requirements Specifications</glossterm>
+				<acronym>IEEE, 1998</acronym>
+				<abbrev>IEEE Std 830-1998</abbrev>
+			<glossdef>
+				<para>
+					Softwareanforderungen (Dokument) <link NS2:href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=5841" 						xmlns:NS2="http://www.w3.org/1999/xlink"></link>.Das Dokument ist eine Dokument des SAMU-Projektes.
+				</para>
+			</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>D</title>
+			<glossentry>
+				<glossterm>Developmental Robotics</glossterm>
+				<abbrev>DevRob</abbrev>
+				<glossdef>
+					<para>
+						Das ist ein Anwendungsbereich der Robotik ,welcher die Künstliche Intelligenz als massgebend  zur individuellen 						Entwicklung hält
+					</para>
+				</glossdef>
+			</glossentry>
+			<glossentry>
+				<glossterm>Deep Q-Learning</glossterm>
+				<abbrev>DeepQ</abbrev>
+				<glossdef>
+					<para>
+					 Es ist eine Anwendung für die Q-learning Technik (Prozedur)
+					</para>
+				</glossdef>
+			</glossentry>
+			<glossentry>
+				<glossterm>DocBook XML</glossterm>
+				<abbrev>DB</abbrev>
+				<glossdef>
+					<para>
+					   <indexterm>
+						<primary>DocBook</primary>
+						<secondary>XML</secondary>
+					   </indexterm>
+					<link NS2:href="http://docbook.org/tdg51/en/html/" xmlns:NS2="http://www.w3.org/1999/xlink">DocBook</link>Haupsächlich wurde 						entwickelt als eine moderne , standard Markierunsprache für die Erzeugung der Dokumente.
+					</para>
+				</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>L</title>
+			<glossentry>
+				<glossterm>Liv-Zempel-Welch algoritmus</glossterm>
+				<abbrev>LZW</abbrev>
+				<glossdef>
+					<para>
+						Leistungsfähiges Datenkomprimierung.
+					</para>
+				</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>M</title>
+			<glossentry>
+				<glossterm>Multilayer Perceptron</glossterm>
+				<abbrev>MLP</abbrev>
+				<glossdef>
+					<para>
+					 Das ist ein künstliches Netz welches verdeckte Schichte verwaltet. Jeder Neuron ist ein Percetron.
+					</para>
+				</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>N</title>
+			<glossentry>
+				<glossterm>Natural Language Processing</glossterm>
+				<abbrev>NLP</abbrev>
+				<glossdef>
+					<para>
+					Dieser Anwendugsbereich verwaltet die rechnerische Verarbeitung der menschlichen Sprachen 
+					(auf Grund der Mensch-Maschine – artige Interaktion)
+					</para>
+				</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>U</title>
+			<glossentry>
+				<glossterm>The Yearbook of the Programmers of University of Debrecen</glossterm>
+				<abbrev>UDPROG</abbrev>
+				<glossdef>
+					<para>
+					 <link NS2:href="http://progpater.blog.hu/2014/05/31/ez_a_prog1_mi_lesz_a" xmlns:NS2="http://www.w3.org/1999/xlink">
+					</link>
+					<link NS2:href="https://www.facebook.com/groups/udprog/" xmlns:NS2="http://www.w3.org/1999/xlink">
+					</link>
+					<link NS2:href="http://sourceforge.net/p/udprog/code/ci/master/tree/" xmlns:NS2="http://www.w3.org/1999/xlink">
+					</link>
+					<link NS2:href="http://sourceforge.net/projects/udprog/files/?source=navbar" xmlns:NS2="http://www.w3.org/1999/xlink">
+					</link>
+					Des ist eine Facebook Ausbildung-Seite (Programmierung) der UNI Debrecen. 
+					Das Dokument ist ein Beispiel.
+					</para>
+				</glossdef>
+			</glossentry>
+		</glossdiv>
+		<glossdiv>
+			<title>O</title>
+			<glossentry>
+				<glossterm>Robocar World Championship</glossterm>
+				<acronym>Auto-Roboter-Weltmeisterschaft</acronym>
+				<abbrev>OOCWC</abbrev>
+				<glossdef>
+					<para>
+					Die Robocar Weltmeisterschaft Initiative stellt eine Softwareplattform zur Verfügung.
+					Dieses ermöglicht die Forschung der Kommunikationzwischen inteligente Robotfahrzeuge (innerhalb einer Stadt)
+					<link NS2:href="https://github.com/nbatfai/robocar-emulator" xmlns:NS2="http://www.w3.org/1999/xlink">
+						https://github.com/nbatfai/robocar-emulator
+					</link>.
+					</para>
+				</glossdef>
+			</glossentry>
+		</glossdiv>
+</glossary>
